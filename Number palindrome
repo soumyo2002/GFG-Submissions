@@ -1,0 +1,22 @@
+Link to the problem:https://www.geeksforgeeks.org/check-if-a-number-is-palindrome/
+
+class HelloWorld {
+    public static void answer(String s){
+        if(s.charAt(0)!=s.charAt(s.length()-1)){
+        System.out.println("Not palindrome");
+        return;
+        }
+        
+        if(s.length()==1){
+        System.out.println("Palindrome");
+        return;
+        }
+        
+        answer(s.substring(1,s.length()-1));
+    }
+    
+    public static void main(String[] args) {
+        
+        answer("313");
+    }
+}
